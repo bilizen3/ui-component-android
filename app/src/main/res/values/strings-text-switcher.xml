@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="textSwitcher.goodMorning">Buenos dias</string>
+    <string name="textSwitcher.goodNight">Buenas noches</string>
+</resources>

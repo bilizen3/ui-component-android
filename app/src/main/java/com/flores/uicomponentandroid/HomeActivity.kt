@@ -3,6 +3,7 @@ package com.flores.uicomponentandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.flores.uicomponentandroid.textSwitcher.TextSwitcherActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 /**

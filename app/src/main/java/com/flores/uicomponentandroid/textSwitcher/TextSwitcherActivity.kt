@@ -1,11 +1,11 @@
-package com.flores.uicomponentandroid
+package com.flores.uicomponentandroid.textSwitcher
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.animation.AnimationUtils
 import android.widget.TextView
 import android.widget.ViewSwitcher
 import androidx.appcompat.app.AppCompatActivity
+import com.flores.uicomponentandroid.R
 import kotlinx.android.synthetic.main.activity_text_switcher.*
 
 
@@ -26,19 +26,20 @@ class TextSwitcherActivity : AppCompatActivity() {
     private fun initUi() {
         textSwitcher_ts.setFactory(ViewSwitcher.ViewFactory {
             val textView = TextView(this);
-            textView.gravity = Gravity.TOP or Gravity.CENTER_HORIZONTAL
             return@ViewFactory textView
         })
 
         textSwitcher_ts.inAnimation =
-            AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left)
-        textSwitcher_ts.outAnimation = AnimationUtils.loadAnimation(
-            this, android.R.anim
-                .slide_out_right
-        )
-        textSwitcher_ts.setCurrentText("Buenos dias");
+            AnimationUtils.loadAnimation(
+                this, R.anim.text_switcher_fade_in_anim
+            )
+        textSwitcher_ts.outAnimation =
+            AnimationUtils.loadAnimation(
+                this, R.anim.text_switcher_fade_out_anim
+            )
+        textSwitcher_ts.setCurrentText(getString(R.string.textSwitcher_goodMorning))
         textSwitcher_btn_start.setOnClickListener {
-            textSwitcher_ts.setCurrentText("Buenas noches")
+            textSwitcher_ts.setText(getString(R.string.textSwitcher_goodNight))
         }
     }
 
