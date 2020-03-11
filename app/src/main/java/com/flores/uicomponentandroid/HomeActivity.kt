@@ -7,7 +7,7 @@ import com.flores.uicomponentandroid.textSwitcher.TextSwitcherActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 /**
- * MainActivity
+ * HomeActivity
  *
  * @author Bill Flores - bilizen3@gmail.com
  * @since 03/10/2020
